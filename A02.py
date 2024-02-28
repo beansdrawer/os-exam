@@ -1,8 +1,11 @@
+import concurrent.futures
+import time
+
 def task(name):
-    print(f"{name} starting")
-    time.sleep(2)  # 간단한 대기 시간 대신 실제 작업을 수행할 수 있습니다.
-    print(f"{name} finishing")
-    return f"{name} result"
+    print(f"{name} 시작")
+    print(f"{name}가 인사를 하네요. 안녕!!")
+    print(f"{name} 종료")
+    return f"{name}의 result 값 반환"
 
 if __name__ == "__main__":
     # 최대 3개의 프로세스를 가진 프로세스 풀 생성
